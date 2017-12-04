@@ -1,0 +1,26 @@
+def loadData()
+	from json import loads
+
+	lista = loads(open("outfile.db").read())
+
+	print(lista)
+
+	for product in lista:
+		print(product["Cantidad"] + " | " + product["Producto"] + " | " + product["Precio"])
+
+def saveData()
+	from json import dump
+	
+	lista = []
+
+	for i in range(2):
+		product = {}
+
+		product["Cantidad"] = input("Cantidad: ")
+		product["Producto"] = input("Producto: ")
+		product["Precio"] = input("Precio: ")
+
+		lista.append(product)
+
+	with open ("outfile.db", "w") as fout:
+		dump(lista, fout)

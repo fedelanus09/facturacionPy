@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+from json import dump
+
+lista = []
+
+for i in range(2):
+	product = {}
+
+	product["Cantidad"] = input("Cantidad: ")
+	product["Producto"] = input("Producto: ")
+	product["Precio"] = input("Precio: ") 
+
+	lista.append(product)
+
+with open ("outfile.db", "w") as fout:
+	dump(lista, fout)

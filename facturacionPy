@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+import time
+import os
+import json
+
+mainMenu()
+persistence()
+
+loadData
+
+while :
+	mainMenu
+
+	mainOption = input("Seleccione una opcion: ")
+
+	if mainOption == "i" or "I":
+		add
+	elif mainOption == "e" or "E":
+		delete
+	elif mainOption == "l" or "L":
+		search
+	elif mainOption == "v" or "V":
+		sale
+	elif mainOption == "s" or "S":
+		print()
+		print("Gracias!")
+		print()
+	else:
+		print()
+		print("ERROR! OPCION INCORRECTA")
+		time.sleep(1)
+
+	if mainOption not in ("s","S"):
+		break
+
+saveData

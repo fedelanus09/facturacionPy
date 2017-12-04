@@ -1,0 +1,34 @@
+def saveData()
+	os.remove("quantity.db")
+	os.remove("item.db")
+	os.remove("price.db")
+				
+	for i in currentIndex:
+		if status[i] == "ACTIVE":
+			print(quantity[i] >> quantity.db)
+			print(item[i] >> item.db)
+			print(price[i] >> price.db)
+																		
+	print()
+	print(str(#status[@]) + "items procesados...")
+	print()
+
+def loadData()
+	if -f quantity.db and -f item.db and -f price.db:
+		currentIndex = 0
+		while read dataLine:
+			quantity[currentIndex] = dataLine
+			currentIndex = (currentIndex + 1)
+		done < quantity.db
+
+		currentIndex = 0
+		while read dataLine:
+			item[currentIndex] = dataLine
+			currentIndex = (currentIndex + 1)
+		done < item.db
+																									
+		currentIndex = 0
+		while read dataLine:
+			price[currentIndex] = dataLine
+			currentIndex = (currentIndex + 1)
+		done < price.db
