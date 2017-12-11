@@ -1,17 +1,9 @@
-from json import dump
 from json import loads
-from pathlib import Path
-
-def saveData(inventory):
-	with open("outfile.json", "w") as fout:
-		dump(inventory, fout)
+from json import dump
 
 def loadData():
-	inventary = []
+	inventory = loads(open("outfile.json").read())
 
-	outfile = Path("./outfile.json")
-	
-	if outfile.is_file():
-		inventary = loads(open("outfile.json").read())
-		
-		return inventory
+def saveData():
+	with open("outfile.json", "w") as fout:
+		dump(inventory, fout)
