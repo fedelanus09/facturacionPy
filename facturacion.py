@@ -1,37 +1,33 @@
 #!/usr/bin/env python3
-.
 
-import time
-from mainMenu import *
 from createMenu import *
-from showMenu import *
-from sellMenu import *
+from mainMenu import *
 from persistence import *
-from os import system
+from searchMenu import *
+from sellMenu import *
+from time import time
 
-loadData(products)
-
-while True:
-	mainMenu()
+def menu():
+	while True:
+		mainMenu()
 	
-	mainOption = int(input("Seleccione una opcion: "))
+		mainOption = input("Seleccione una opcion: ")
 		
-	if mainOption == "1":
-		createMenu()
-	elif mainOption == "2":
-		showMenu()
-	elif mainOption == "3":
-		sellMenu()
-	elif mainOption == "4":
-		print()
-		print("Gracias!")
-		print()
-	else:
-		print()
-		print("ERROR! OPCION INCORRECTA")
-		time.sleep(1)
-	
-	if mainOption == "4":
-		break
-
-saveData(products)
+		if mainOption == "1":
+			create()
+		elif mainOption == "2":
+			search()
+		elif mainOption == "3":
+			sell()
+		elif mainOption == "4":
+			print()
+			print("Gracias!")
+			print()
+			sleep(1)
+			break
+		else:
+			print()
+			print("ERROR! OPCION INCORRECTA")
+			sleep(1)
+			
+menu()
