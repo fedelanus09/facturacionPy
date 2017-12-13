@@ -1,11 +1,12 @@
+import time
 from os import system
-from time import time
+from searchMenu import *
 
 def sellMenu():
-	osystem('clear')
+	system('clear')
 	
-	print("Ventas")
-	print("======")
+	print("Menu de Ventas")
+	print("==== == ======")
 	print()
 	print(" 1) Realizar venta")
 	print(" 2) Volver al menu anterior")
@@ -18,17 +19,17 @@ def sell():
 		sellOption = int(input("Seleccione una opcion: "))
 		
 		if sellOption == "1":
+			time.sleep(1)
 			sale()
 			print()
 			input("Presione ENTER para volver al menu...")
+			time.sleep(1)
 		elif sellOption == "2":
-			invalid_input = False
+			break
 		else:
 			print()
 			print("ERROR! OPCION INCORRECTA")
-			sleep(1)
-			
-		return sell
+			time.sleep(1)
 
 def sale():
 	system('clear')
@@ -39,7 +40,7 @@ def sale():
 		saleOption = input("Nombre de producto: ")
 		
 		if saleOption == "Remera":
-			tshirtSale()
+			tShirtSale()
 		elif saleOption == "Jean":
 			jeanSale()
 		elif saleOption == "Musculosa":
@@ -51,7 +52,10 @@ def sale():
 		else:
 			print()
 			print("ERROR! NOMBRE DE PRODUCTO INCORRECTO")
-			sleep(1)
-			sale()
+			time.sleep(1)
 
-		return sell
+def tShirtSale():
+	while True:
+		tShirtOption = int(input("Cantidad: "))
+		
+		

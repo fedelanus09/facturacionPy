@@ -1,5 +1,6 @@
+import time
 from os import system
-from time import time
+from persistence import saveData
 
 def registerMenu():
 	system('clear')
@@ -18,32 +19,32 @@ def create():
 		createOption = input("Seleccione una opcion: ")
 	
 		if createOption == "1":
-			newProduct()
+			time.sleep(1)
+			system('clear')
+			addProduct()
 			print()
 			input("Presione ENTER para volver al menu...")
+			time.sleep(1)
 		elif createOption == "2":
-			menu()
+			break
 		else:
 			print()
 			print("ERROR! OPCION INCORRECTA")
-			sleep(1)
+			time.sleep(1)
 		
 
-def newProduct():
-	system('clear')
+def addProduct():
+	print("INGRESO DE NUEVO PRODUCTO")
+	print("======= == ===== ========")
+	print()
 	
-	inventory = []
-
-	for i in range(5):
-		products = {}
-		
-		system('clear')
-		print("INGRESO DE NUEVO PRODUCTO")
-		print()
-		products["quantity"] = int(input("Cantidad: "))
-		products["product"] = input("Producto: ")
-		products["price"] = int(input("Precio: "))
-		
-		inventory.append(products)
-
-	saveData()
+	product = {}
+	
+	product["producto"] = input("Nombre de producto: ")
+	product["cantidad"] = int(input("Cantidad: "))
+	product["precio"] = int(input("Precio: "))
+	
+	inventory.append(product)
+	
+	saveData(inventory)
+	
