@@ -43,4 +43,4 @@ def showAll():
 	
 	for product in inventory:
 		print("    " + str(product["cantidad"]) + "    | " + product["producto"] \
-			+ " |     $" + str(product["precio"]) + "     |"
+			+ " |     $" + str(product["precio"]) + "     |")
