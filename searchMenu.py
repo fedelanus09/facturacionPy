@@ -37,10 +37,6 @@ def showAll():
 	print(" Lista de Productos")
 	print(" ===== == =========")
 	print()
-	print(" Cantidad | Producto | Precio unit. |")
+	print(" Cantidad | Producto  | Precio unit. |")
 	
 	loadData()
-	
-	for product in inventory:
-		print("    " + str(product["cantidad"]) + "    | " + product["producto"] \
-			+ " |     $" + str(product["precio"]) + "     |")

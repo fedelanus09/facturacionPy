@@ -38,13 +38,4 @@ def addProduct():
 	print("======= == ===== ========")
 	print()
 	
-	product = {}
-	
-	product["producto"] = input("Nombre de producto: ")
-	product["cantidad"] = int(input("Cantidad: "))
-	product["precio"] = int(input("Precio: "))
-	
-	inventory.append(product)
-	
-	saveData(inventory)
-	
+	saveData()
